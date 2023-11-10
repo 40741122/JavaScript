@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // let user={};
+        // console.log(user);
+        // user.name="Joe";
+        // console.log(user);
+        // console.log(user.name);
+
+        // user.name="Jack";
+        // console.log(user);
+
+        let user={
+            //key = value
+            name:"Joe",
+            nickname:"J",
+            email:"Joe@test.com",
+            height:170,
+            weight:77,
+            favorite:{
+                fruit:["apple", "banana"],
+                movie:["Iron Man", "Iron Man2", "Iron Man3",]
+            },
+            sayHello: function(){
+                console.log(`Hello I'm  ${this.name}`);
+            }, 
+            sayGoodbye(){
+                console.log(`Goodbye`);
+            },
+            bmi(){
+                let height = this.height /100;
+                let bmi = this.weight/Math.pow(height, 2);
+                console.log(`${this.name}的 BMI 是 ${bmi}`);
+            }
+        }
+
+        console.log(user);
+        // delete user.weight;
+        // console.log(user);
+        console.log(user.favorite.fruit);
+        console.log(user["favorite"] ["movie"]);
+        user.sayHello();
+        user.sayGoodbye();
+        user.bmi();
+    </script>
+</body>
+</html>

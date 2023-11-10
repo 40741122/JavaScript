@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let fruit=["apple", "banana", "mango","orange", "peach"];
+
+        console.log("原始陣列");
+        console.log(fruit);
+        console.log("push");
+        fruit.push("melon");
+        console.log(fruit);
+        console.log("pop");
+        fruit.pop();
+        console.log(fruit);
+        console.log("shift");
+        fruit.shift();
+        console.log(fruit);
+        console.log("unshift");
+        fruit.unshift("apple");
+        console.log(fruit);
+        console.log("indexOf");
+        console.log(fruit.indexOf("banana"));
+        console.log(fruit.indexOf("melon"));
+        console.log("splice");
+        fruit.splice(2, 1);
+        console.log(fruit);
+        console.log("splice");
+        fruit.splice(2, 0, "mango", "strawberry")
+        console.log(fruit);
+        console.log("slice");
+        let fruit2 = fruit.slice(1,3);
+        console.log(fruit2);
+
+    </script>
+
+</body>
+</html>

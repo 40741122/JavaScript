@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope var</title>
+</head>
+<body>
+    
+    <script>
+        //全域變數
+        var name="Joe";
+
+        console.log(name);
+
+        //let 是區塊作用域
+        if(true){
+            var fruit='apple';
+            console.log(`${fruit} inside {}`);
+        }
+        console.log(`${fruit} outside {}`);
+
+        function callName(){
+            console.log(`global name: ${name}`);
+        }
+        callName();
+
+        // var 是函式作用域
+        function callName2(){
+            // 區域變數
+            var name2="Mike";
+            console.log(`local name: ${name2}`);
+        }
+        callName2();
+        
+    </script>
+</body>
+</html>

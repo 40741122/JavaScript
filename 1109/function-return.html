@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function callName(name="Jay"){
+            return name;
+            // return;
+            console.log(name);
+        }
+
+        callName("Tom");
+        let name=callName("Tom");
+        console.log(name);
+        console.log(callName("Tom"));
+
+        function callName2(name="Jay"){
+            let intro=`Hello, ${name}.`;
+
+        }
+
+        console.log(callName2("Tom"));
+    </script>
+</body>
+</html>

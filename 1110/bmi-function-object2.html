@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+</head>
+
+<body>
+    <script>
+        let users=[
+            {
+                name: "Mike",
+                height: 174,
+                weight: 76
+            },
+            {
+                name: "Sue",
+                height: 159,
+                weight: 50
+            },
+            {
+                name: "Jack",
+                height: 177,
+                weight: 87
+            },
+        ]
+
+        function bmi(user) {
+            let height = user.height / 100;
+            let bmi = user.weight / Math.pow(height, 2)
+            let bmiDescription = "";
+            console.log(`${user.name} 的BMI 是 ${bmi}`);
+
+            if (bmi < 18.5) {
+                bmiDescription = "體重過輕"
+            } else if (bmi >= 18.5 && bmi < 24) {
+                bmiDescription = "正常"
+            }
+            else if (bmi >= 24 && bmi < 27) {
+                bmiDescription = "過重"
+            } else if (bmi >= 27 && bmi < 30) {
+                bmiDescription = "輕度肥胖"
+            } else if (bmi >= 30 && bmi < 35) {
+                bmiDescription = "中度肥胖"
+            } else {
+                bmiDescription = "重度肥胖"
+            }
+            console.log(bmiDescription);
+        }
+
+        for(let user of users){
+            bmi(user);
+        }
+        
+    </script>
+</body>
+
+</html>

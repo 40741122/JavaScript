@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+</head>
+
+<body>
+    <script>
+        let height = 171;
+        let weight = 70;
+        // let bmi= 70 / ( (height/100) * (height/100) );
+
+        height = height / 100;
+        // 方法一
+        // let bmi = weight / (height * height)
+
+        //方法二
+        let bmi=weight/ Math.pow(height, 2)
+
+        let bmiDescription = "";
+        // console.log(bmi);
+
+        if (bmi < 18.5) {
+            bmiDescription = "體重過輕"
+        } else if (bmi >= 18.5 && bmi < 24) {
+            bmiDescription = "正常"
+        }
+        else if (bmi >= 24 && bmi < 27) {
+            bmiDescription = "過重"
+        } else if (bmi >= 27 && bmi < 30) {
+            bmiDescription = "輕度肥胖"
+        } else if (bmi >= 30 && bmi < 35) {
+            bmiDescription = "中度肥胖"
+        } else {
+            bmiDescription = "重度肥胖"
+        }
+        console.log(bmiDescription);
+    </script>
+</body>
+
+</html>

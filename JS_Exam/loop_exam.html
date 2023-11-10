@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Exam</title>
+</head>
+<body>
+    
+    <script>
+        let users=["Joe", "Peter", "May", "Jack", "Jay", "Sue", "Dan", "Ada", "Abe", "Bob"];
+
+        function checkUser(text){
+            let checkPoint=0;
+            for(let i=0; i<users.length; i++){
+                if(users[i]==text){
+                    console.log(`${text} 存在`);
+                    checkPoint += 1;
+                    break;
+                }
+            }
+
+            if(checkPoint==0){
+                console.log(`${text} 不存在`);
+            }
+        }
+
+        checkUser("Bobs");
+        
+    </script>
+</body>
+</html>

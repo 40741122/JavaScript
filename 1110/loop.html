@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        console.log("break");
+        for(let i=0; i<10; i++){
+            console.log(i);
+            if(i==3){
+                break;
+            }
+        }
+        console.log("---");
+        let users=["Joe", "Peter", "May", "Jack"];
+        // console.log(users.indexOf("Peter"));
+
+        let checkUser="qwe";
+        for(let i=0; i<users.length; i++){
+            if(users[i]==checkUser){
+                console.log(`${checkUser} 存在`);
+                break;
+            }
+        }
+
+        console.log("continue");
+        for(let i=1; i<10; i++){
+            if(i==3)continue;
+            console.log(i);
+        }
+    </script>
+</body>
+</html>

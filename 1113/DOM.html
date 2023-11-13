@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        .btn{
+            background: yellow;
+        }
+        #button{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <button id="button" >click</button>
+    <button >button</button>
+    <button class="btn">button</button>
+    <button class="btn" id="button">button</button>
+
+    <script>
+        // id
+        const button=document.getElementById("button")
+
+        console.log(button);
+
+        button.onclick=function(){
+            console.log("click");
+        }
+
+        // tag
+        // const buttons=document.getElementsByTagName("button")
+        // console.log(buttons);
+
+        // for(let i=0; i<buttons.length; i++){
+        //     buttons[i].onclick=function(){
+        //         console.log("click: "+i);
+        //     }
+        // }
+
+        // class
+        const btns=document.getElementsByClassName("btn")
+        console.log(btns);
+        for(let i=0;i<btns.length;i++){
+            btns[i].onclick=function(){
+                console.log("btn: "+i);
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>

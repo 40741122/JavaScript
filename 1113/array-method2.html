@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        console.log("every");
+        let arr1=[12, 5, 8, 130, 44];
+        let arr2=[12, 54, 18, 130, 44];
+        let arr3=[2, 5, 8, 6, 3]
+
+        function isBigEnough(number){
+            return number >= 10;
+        }
+
+        // let isBigEnough1=arr1.every(
+        //     function(number){
+        //         return number >= 10 ;
+        //     }
+        // )
+
+        let isBigEnough1=arr1.every(isBigEnough);
+
+        console.log(isBigEnough1);
+        console.log(arr2.every(isBigEnough));
+
+        console.log("some");
+        console.log(arr1.some(isBigEnough));
+        console.log(arr3.some(isBigEnough));
+
+
+    </script>
+</body>
+</html>

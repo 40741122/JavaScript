@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let now = new Date();
+        let weekDayArr = ["日", "一", "二", "三", "四", "五", "六"]
+        let weekDay = weekDayArr[now.getDay()]
+        console.log(now);
+        console.log(now.getDate());  
+        console.log(`${now.getFullYear()}/${now.getMonth()+1}/${now.getDate()}(${weekDay}) ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        console.log("--isNaN--");
+        console.log(isNaN(NaN));
+        console.log(isNaN("string"));
+        console.log(isNaN(21));
+        console.log(isNaN(true));
+        console.log(isNaN(null));
+
+        console.log("--toFixed--")
+        let numberOnj=12345.6789;
+        console.log(numberOnj.toFixed());
+        console.log(numberOnj.toFixed(2));
+        console.log(numberOnj.toFixed(6));
+
+        console.log("--JSON.stringfy--");
+        let people = [
+            {
+                name: 'Jay',
+                like: 'apple',
+                gender: 'male',
+                age: 18,
+                // adult: true
+            },
+            {
+                name: 'Sarah',
+                like: 'banana',
+                gender: 'female',
+                age: 24
+            },
+            {
+                name: 'Tom',
+                like: 'orange',
+                gender: 'male',
+                age: 1
+            },
+            {
+                name: 'Jacy',
+                like: 'orange',
+                gender: 'female',
+                age: 3
+            }
+        ];
+        console.log(people);
+        let peopleString = JSON.stringify(people);
+        console.log(peopleString);
+        console.log(people[0]);
+        // console.log(peopleString[0]);
+        let peopleParse = JSON.parse(peopleString);
+        console.log(peopleParse);
+
+        console.log("--toLocalString--");
+        let price = 1500;
+        console.log(price.toLocaleString());
+        
+
+    </script>
+</body>
+</html>

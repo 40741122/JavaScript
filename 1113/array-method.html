@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Method</title>
+</head>
+
+<body>
+    <script>
+        let people = [
+            {
+                name: 'Jay',
+                like: 'apple',
+                gender: 'male',
+                age: 18,
+                // adult: true
+            },
+            {
+                name: 'Sarah',
+                like: 'banana',
+                gender: 'female',
+                age: 24
+            },
+            {
+                name: 'Tom',
+                like: 'orange',
+                gender: 'male',
+                age: 1
+            },
+            {
+                name: 'Jacy',
+                like: 'orange',
+                gender: 'female',
+                age: 3
+            }
+        ];
+
+        console.table(people);
+
+        console.log("forEach");
+        people.forEach(
+            function(user, index, array){
+            // console.log(index, user.name, array);
+            console.log(`${user.name}'s age is ${user.age}`);
+            }
+        );
+
+        console.log('filter');
+        let peopleAdult = people.filter(
+            function(user){
+                return user.age >= 18;
+            }
+        );
+
+        let peopleFemale = people.filter(
+            function(user){
+                return user.gender == "female";
+            }
+        );
+
+        console.log(peopleAdult);
+        console.log(peopleFemale);
+
+        console.log("find");
+        let findJacy=people.find(
+            function(user){
+                return user.name == "Jacy";
+            }
+        );
+        
+        let findMay=people.find(
+            function(user){
+                return user.name == "May";
+            }
+        );
+
+        console.log(findJacy);
+        console.log(findMay);
+
+        console.log("map");
+        let numbers=[2,6,12,5];
+        let twiceNumbers=numbers.map(
+            function(number){
+                if(number%2==0){
+                    return number * 2;
+                }
+            }
+        )
+        console.log(twiceNumbers);
+
+        let peopleNew=people.map(
+            function(user){
+                if(user.age>=18){
+                    user.adult=true;
+                }else{
+                    user.adult=false;
+                }
+                return user;
+            }
+        )
+        console.table(peopleNew);
+
+        let peopleLike=people.map(
+            function(user){
+                return `${user.name} likes ${user.like}`;
+            }
+        )
+        console.log(peopleLike);
+    </script>
+
+</body>
+
+</html>

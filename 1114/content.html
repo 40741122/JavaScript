@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content</title>
+
+    <style>
+        h1 span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="getContent">get textContent</button>
+        <button id="setContent">set textContent</button>
+        <button id="getText">getText</button>
+        <button id="setText">setText</button>
+        <button id="getHtml">getHtml</button>
+        <button id="setHtml">setHtml</button>
+    </div>
+    <h1 id="target">Hello <span>World</span></h1>
+
+    <script>
+        const getContent=document.querySelector("#getContent");
+        const setContent=document.querySelector("#setContent");
+        const getText=document.querySelector("#getText");
+        const setText=document.querySelector("#setText");
+        const getHtml=document.querySelector("#getHtml");
+        const setHtml=document.querySelector("#setHtml");
+        const target=document.querySelector("h1");
+        // console.log(target);
+
+        //textContent
+        // let content=target.textContent;
+        // console.log(content);
+        // target.textContent="New Content";
+
+        getContent.onclick=function(){
+            let content=target.textContent;
+            console.log(content);
+        }
+
+        setContent.onclick=function(){
+            target.textContent="New     Content"
+        }
+
+        getText.onclick=function(){
+            let content=target.innerText;
+            console.log(content);
+        }
+
+        setText.onclick=function(){
+            let newContent="New <span>Content<span>";
+            target.textContent=newContent;
+        }
+
+        getHtml.onclick=function(){
+            let content=target.innerHTML;
+            console.log(content);
+        }
+
+        setHtml.onclick=function(){
+            let newContent="New <span>Content<span>";
+            target.innerHTML=newContent;
+        }
+    </script>
+</body>
+</html>

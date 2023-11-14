@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Travelsal</title>
+    <style>
+        .box{
+            background: pink;
+            padding: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+        <img id="img" src="/image/1.png" alt="">
+    </div>
+
+    <script>
+        const img=document.querySelector("#img");
+        const imgParent=img.parentNode;
+        console.log(imgParent);
+        
+        const box=document.querySelector("#box");
+        
+        const boxChildren=box.childNodes;
+        console.log(boxChildren);
+        console.log(boxChildren[1]);
+    </script>
+</body>
+</html>

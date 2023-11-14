@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attr</title>
+</head>
+<body>
+    <div>
+        <button id="getSrc">getSrc</button>
+        <button id="setSrc">setSrc</button>
+    </div>
+    <img id="img" src="/image/1.png" alt="妙蛙種子">
+    <hr>
+    <div>
+        <button id="getLink">getLink</button>
+        <button id="setLink">setLink</button>
+    </div>
+    <a id="link" href="https://www.google.com/">Google</a>
+
+    <script>
+        const getSrc=document.querySelector("#getSrc");
+        const setSrc=document.querySelector("#setSrc");
+        const img=document.querySelector("#img");
+        const getLink=document.querySelector("#getLink");
+        const setLink=document.querySelector("#setLink");
+        const link=document.querySelector("#link")
+
+        getSrc.onclick=function(){
+            let src=img.src;
+            let alt=img.alt;
+            console.log("src", src);
+            console.log("alt", alt);
+        }
+
+        setSrc.onclick=function(){
+            img.src="/image/4.png";
+            img.alt="小火龍";
+        }
+
+        getLink.onclick=function(){
+            let linkUrl=link.href;
+            console.log("link", linkUrl);
+        }
+
+        setLink.onclick=function(){
+            link.href="https://www.facebook.com/";
+            link.innerText="Facebook";
+        }
+    </script>
+</body>
+</html>

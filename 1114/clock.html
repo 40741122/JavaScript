@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Pacifico&display=swap" rel="stylesheet">
+    <title>Clock</title>
+    <style>
+        body{
+            background: #000;
+        }
+        #clock{
+            text-align: center;
+            color: greenyellow;
+            font-size: 48px;
+            font-family: 'Kdam Thmor Pro', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clock">
+        0000/00/00(一) 00:00:00
+    </div>
+
+
+    <script>
+
+        const getTime=document.querySelector("#clock");
+
+        function showTime() {
+            let now = new Date();
+            let weekDayArr = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            let year = now.getFullYear();
+            let month = now.getMonth() + 1;
+            let date = now.getDate();
+            let weekDay = weekDayArr[now.getDay()]
+            let hour = now.getHours();
+            if(hour<10)hour="0"+hour;
+            let minute = now.getMinutes();
+            if(minute<10)minute="0"+hour;
+            let second = now.getSeconds();
+            if(second<10)second="0"+second;
+            getTime.innerText=`${year}/${month}/${date}(${weekDay}) ${hour}:${minute}:${second}`;
+            // console.log(`${year}/${month}/${date}(${weekDay}) ${hour}:${minute}:${second}`);
+        }
+        showTime()
+        setInterval(showTime, 1000)
+
+
+
+    </script>
+</body>
+
+</html>

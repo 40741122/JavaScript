@@ -27,14 +27,55 @@
 </head>
 <body>
     <div class="container">
-        <figure class="main-pic mx-auto">
-            <img src="/image/1.png" alt="">
+        <figure class="main-pic mx-auto text-align:center">
+            <img src="/image/1.png" alt="" id="showImg">
         </figure>
-        <div class=" thumb">
+        <div class="thumb d-flex justify-content-center">
             <div class="pic ratio ratio-1x1 mx-2 object-fit-cover">
-                <img src="/image/1.png" alt="">
+                <img id="img1" src="/image/1.png" alt="">
+            </div>
+            <div class="pic ratio ratio-1x1 mx-2 object-fit-cover">
+                <img id="img2" src="/image/4.png" alt="">
+            </div>
+            <div class="pic ratio ratio-1x1 mx-2 object-fit-cover">
+                <img id="img3" src="/image/dr_fate.jpg" alt="">
+            </div>
+            <div class="pic ratio ratio-1x1 mx-2 object-fit-cover">
+                <img id="img4" src="/image/dr_strange.jpg" alt="">
+            </div>
+            <div class="pic ratio ratio-1x1 mx-2 object-fit-cover">
+                <img id="img5" src="/image/deadpool.jpg" alt="">
             </div>
         </div>
     </div>
+
+    <script>
+        const showImg=document.querySelector("#showImg");
+        const img1=document.querySelector("#img1");
+        const img2=document.querySelector("#img2");
+        const img3=document.querySelector("#img3");
+        const img4=document.querySelector("#img4");
+        const img5=document.querySelector("#img5");
+
+        img1.onclick=function(){
+            showImg.src=img1.src;
+        }
+
+        img2.onclick=function(){
+            showImg.src=img2.src;
+        }
+
+        img3.onclick=function(){
+            showImg.src=img3.src;
+        }
+
+        img4.onclick=function(){
+            showImg.src=img4.src;
+        }
+
+        img5.onclick=function(){
+            showImg.src=img5.src;
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style</title>
+    <style>
+        .box{
+            width: 120px;
+            height: 120px;
+            background: pink;
+            transition: .4s;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="extend">extend</button>
+    </div>
+    <div class="box" style="background: pink; width: 120px;">
+
+    </div>
+    
+    <script>
+        const box=document.querySelector(".box");
+        const extend=document.querySelector("#extend");
+
+        extend.addEventListener(
+            "click", function(){
+                let width=box.clientWidth;
+                width+=10;
+                box.style.width=width +"px";
+            }
+        )
+
+    </script>
+</body>
+</html>

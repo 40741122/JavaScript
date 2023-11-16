@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Pic</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        .object-fit-cover{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .main-pic{
+            width: 240px;
+            & img{
+                width: 100%;
+            }
+        }
+        .pic{
+            width: 72px;
+            border: 4px solid #ccc;
+            &.active{
+                border: 4px solid rgb(249, 23, 234);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <figure class="main-pic mx-auto text-align:center">
+            <img src="/image/1.png" alt="" id="showImg">
+        </figure>
+        <div class="thumb d-flex justify-content-center">
+            <div class="pic ratio ratio-1x1 mx-1 object-fit-cover">
+                <img id="img1" src="/image/1.png" alt="">
+            </div>
+            <div class="pic ratio ratio-1x1 mx-1 object-fit-cover">
+                <img id="img2" src="/image/4.png" alt="">
+            </div>
+            <div class="pic ratio ratio-1x1 mx-1 object-fit-cover">
+                <img id="img3" src="/image/25.png" alt="">
+            </div>
+            <div class="pic ratio ratio-1x1 mx-1 object-fit-cover">
+                <img id="img4" src="/image/7.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const showImg=document.querySelector("#showImg");
+
+        const pics=document.querySelectorAll(".pic");
+
+        for(let i = 0; i<pics.length; i++){
+            pics[i].addEventListener(
+                "click", function(){
+                let imgUrl=pics[i].childNodes[1].src;
+                for(let x= 0; x<pics.length; x++){
+                    pics[x].classList.remove("active");
+                }
+                pics[i].classList.add("active");
+                showImg.src=imgUrl;
+                }
+            )
+        }
+    </script>
+</body>
+</html>
